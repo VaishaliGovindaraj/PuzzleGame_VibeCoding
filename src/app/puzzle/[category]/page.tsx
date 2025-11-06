@@ -122,7 +122,7 @@ export default function PuzzlePage({
         {/* Category Title */}
         <div className={`bg-linear-to-r ${info.color} rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 mb-4 sm:mb-5 md:mb-6 text-center shadow-lg`}>
           <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl mb-2">{info.emoji}</div>
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">{info.name}</h1>
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-xl font-bold text-white">{info.name}</h1>
           <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl mt-2">
             Puzzle {currentIndex + 1} of {filteredPuzzles.length}
           </p>
@@ -132,10 +132,10 @@ export default function PuzzlePage({
         <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 lg:p-8 shadow-2xl mb-4 sm:mb-5">
           {/* Question */}
           <div className="mb-5 sm:mb-6 md:mb-7">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-3 sm:mb-4 px-2">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold text-gray-800 mb-3 sm:mb-4 px-2">
               {currentPuzzle.title}
             </h2>
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center py-5 sm:py-6 md:py-7 lg:py-8 bg-gray-50 rounded-xl sm:rounded-2xl wrap-break-word px-3">
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-xl text-center py-5 sm:py-6 md:py-7 lg:py-8 bg-gray-50 rounded-xl sm:rounded-2xl wrap-break-word px-3">
               {currentPuzzle.question}
             </p>
           </div>
@@ -147,7 +147,7 @@ export default function PuzzlePage({
                 key={index}
                 onClick={() => handleAnswer(index)}
                 disabled={showResult}
-                className={`p-5 sm:p-6 md:p-7 lg:p-8 rounded-xl sm:rounded-2xl text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold transition-all transform active:scale-95 sm:hover:scale-105 min-h-[100px] sm:min-h-[120px] md:min-h-[130px] lg:min-h-[140px] flex items-center justify-center ${
+                className={`p-5 sm:p-6 md:p-7 lg:p-8 rounded-xl sm:rounded-2xl text-2xl sm:text-3xl md:text-4xl lg:text-xl font-bold transition-all transform active:scale-95 sm:hover:scale-105 min-h-[100px] sm:min-h-[120px] md:min-h-[130px] lg:min-h-[140px] flex items-center justify-center ${
                   showResult
                     ? index === currentPuzzle.correctAnswer
                       ? 'bg-green-400 text-white shadow-lg scale-105'
@@ -189,7 +189,7 @@ export default function PuzzlePage({
               >
                 {isCorrect ? '🎉' : '💪'}
               </div>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-5">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold mb-4 sm:mb-5">
                 {isCorrect ? 'Awesome! You got it!' : 'Nice try! Keep going!'}
               </p>
               {!isLastPuzzle ? (
