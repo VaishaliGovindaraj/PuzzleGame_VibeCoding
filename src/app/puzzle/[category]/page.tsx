@@ -4,6 +4,8 @@ import { useState, useEffect, use } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import type { Puzzle, AgeRange } from '@/types/puzzle';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import { useAuth } from '@/contexts/AuthContext';
 
 import patternsData from '@/data/patterns.json';
 import shapesData from '@/data/shapes_match.json';
@@ -29,6 +31,7 @@ export default function PuzzlePage({
   const resolvedParams = use(params);
   const searchParams = useSearchParams();
   const router = useRouter();
+  const { logout } = useAuth();
   const category = resolvedParams.category;
   const ageParam = searchParams.get('age') as AgeRange | null;
 
@@ -58,17 +61,19 @@ export default function PuzzlePage({
 
   if (!currentPuzzle || !info) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 flex items-center justify-center p-4">
-        <div className="text-center">
-          <p className="text-2xl sm:text-3xl mb-4 px-4">No puzzles found!</p>
-          <Link
-            href="/"
-            className="px-6 py-3 sm:px-8 sm:py-4 bg-blue-500 text-white rounded-2xl text-lg sm:text-xl font-bold hover:bg-blue-600 inline-block"
-          >
-            Go Home
-          </Link>
+      <ProtectedRoute>
+        <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 flex items-center justify-center p-4">
+          <div className="text-center">
+            <p className="text-2xl sm:text-3xl mb-4 px-4">No puzzles found!</p>
+            <Link
+              href="/"
+              className="px-6 py-3 sm:px-8 sm:py-4 bg-blue-500 text-white rounded-2xl text-lg sm:text-xl font-bold hover:bg-blue-600 inline-block"
+            >
+              Go Home
+            </Link>
+          </div>
         </div>
-      </div>
+      </ProtectedRoute>
     );
   }
 
@@ -102,22 +107,31 @@ export default function PuzzlePage({
   const isCorrect = selectedAnswer === currentPuzzle.correctAnswer;
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 flex items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8">
-      <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-4xl xl:max-w-5xl">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-4 sm:mb-6 md:mb-8 gap-2">
-          <Link
-            href="/"
-            className="px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 bg-white rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:shadow-lg transition-all"
-          >
-            🏠 <span className="hidden sm:inline">Home</span>
-          </Link>
-          <div className="bg-white rounded-xl sm:rounded-2xl px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-lg">
-            <span className="text-base sm:text-xl md:text-2xl font-bold text-purple-600">
-              Score: {score}/{filteredPuzzles.length}
-            </span>
+    <ProtectedRoute>
+      <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 flex items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8">
+        <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-4xl xl:max-w-5xl">
+          {/* Header */}
+          <div className="flex justify-between items-center mb-4 sm:mb-6 md:mb-8 gap-2">
+            <Link
+              href="/"
+              className="px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 bg-white rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:shadow-lg transition-all"
+            >
+              🏠 <span className="hidden sm:inline">Home</span>
+            </Link>
+            <div className="flex items-center gap-2">
+              <div className="bg-white rounded-xl sm:rounded-2xl px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 shadow-lg">
+                <span className="text-base sm:text-xl md:text-2xl font-bold text-purple-600">
+                  Score: {score}/{filteredPuzzles.length}
+                </span>
+              </div>
+              <button
+                onClick={logout}
+                className="bg-red-500 hover:bg-red-600 text-white font-bold px-3 py-2 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm transition-all transform active:scale-95"
+              >
+                🚪
+              </button>
+            </div>
           </div>
-        </div>
 
         {/* Category Title */}
         <div className={`bg-linear-to-r ${info.color} rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 mb-4 sm:mb-5 md:mb-6 text-center shadow-lg`}>
@@ -237,5 +251,6 @@ export default function PuzzlePage({
         </div>
       </div>
     </div>
+    </ProtectedRoute>
   );
 }
