@@ -38,28 +38,29 @@ export default function Home() {
   const [selectedAge, setSelectedAge] = useState<AgeRange>('3-4');
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 p-4 sm:p-6 md:p-8 lg:p-10">
-      <div className="max-w-7xl mx-auto w-full">
+    <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 flex items-center justify-center p-4 sm:p-6 md:p-8">
+      <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-5xl xl:max-w-6xl">
         {/* Header */}
-        <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-purple-600 mb-4 sm:mb-5 md:mb-6">
+        <div className="text-center mb-6 sm:mb-8 md:mb-10">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-purple-600 mb-3 sm:mb-4">
             🎮 SkillSprout
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 mb-6 sm:mb-8 md:mb-10 px-4">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 mb-6 sm:mb-8 px-4">
             Fun Puzzles for Smart Kids!
           </p>
 
           {/* Age Selection */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 lg:p-10 shadow-lg mb-6 sm:mb-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 mb-4 sm:mb-5 md:mb-6">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-gray-700 mb-3 sm:mb-4 md:mb-5 p-4">
               Select Your Age 🎂
             </h2>
-            <div className="flex gap-3 sm:gap-4 md:gap-5 lg:gap-6 justify-center flex-wrap">
+            <div className="flex gap-3 sm:gap-4 px-4 justify-center flex-wrap">
               {ageRanges.map((age) => (
                 <button
                   key={age.value}
                   onClick={() => setSelectedAge(age.value)}
-                  className={`px-6 py-4 sm:px-8 sm:py-5 md:px-10 md:py-6 lg:px-12 lg:py-7 rounded-xl sm:rounded-2xl text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold transition-all transform active:scale-95 sm:hover:scale-110 ${
+                  // sm:px-20 sm:py-20 md:px-20 md:py-5 lg:px-20 lg:py-5 
+                  className={`p-8 rounded-xl sm:rounded-2xl text-base sm:text-lg md:text-lg lg:text-lg font-bold transition-all transform active:scale-95 sm:hover:scale-110 ${
                     selectedAge === age.value
                       ? 'bg-linear-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-105 sm:scale-110'
                       : 'bg-gray-200 text-gray-700 sm:hover:bg-gray-300'
@@ -80,16 +81,16 @@ export default function Home() {
               href={`/puzzle/${category.id}?age=${selectedAge}`}
               className="group"
             >
-              <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-7 md:p-9 lg:p-10 shadow-lg hover:shadow-2xl transition-all transform active:scale-95 sm:hover:scale-105 cursor-pointer h-full flex flex-col">
-                <div className={`bg-linear-to-br ${category.color} rounded-xl sm:rounded-2xl p-6 sm:p-7 md:p-8 lg:p-10 mb-4 sm:mb-5 grow flex items-center justify-center`}>
-                  <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-center">
+              <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 lg:p-8 shadow-lg hover:shadow-2xl transition-all transform active:scale-95 sm:hover:scale-105 cursor-pointer h-full flex flex-col">
+                <div className={`bg-linear-to-br ${category.color} rounded-xl sm:rounded-2xl p-6 sm:p-7 md:p-8 mb-4 grow flex items-center justify-center`}>
+                  <div className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl text-center">
                     {category.emoji}
                   </div>
                 </div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold text-gray-800 text-center mb-2">
                   {category.name}
                 </h3>
-                <p className="text-gray-600 text-center text-base sm:text-lg md:text-xl lg:text-2xl">
+                <p className="text-gray-600 text-center text-sm sm:text-base md:text-lg lg:text-lg">
                   {category.description}
                 </p>
               </div>
@@ -98,8 +99,8 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-8 sm:mt-10 md:mt-12 text-gray-600 px-4">
-          <p className="text-base sm:text-lg">
+        <div className="text-center mt-6 sm:mt-8 md:mt-10 text-gray-600 px-4">
+          <p className="text-sm sm:text-base md:text-lg">
             Choose a puzzle category to start learning! 🚀
           </p>
         </div>
