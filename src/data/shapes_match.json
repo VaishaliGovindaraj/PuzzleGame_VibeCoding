@@ -1,0 +1,12 @@
+[
+  { "id": "shape_match_1", "ageRange": "3-4", "title": "Find the Circle", "question": "Which one is a circle?", "options": ["🔵", "🔺", "⬜"], "correctAnswer": 0, "hint": "It's round and has no corners." },
+  { "id": "shape_match_2", "ageRange": "3-4", "title": "Find the Square", "question": "Which one is a square?", "options": ["⬜", "🔺", "🟣"], "correctAnswer": 0 },
+  { "id": "shape_match_3", "ageRange": "3-4", "title": "Find the Triangle", "question": "Which one is a triangle?", "options": ["🔺", "🟢", "🔵"], "correctAnswer": 0 },
+  { "id": "shape_match_4", "ageRange": "3-4", "title": "Find the Star", "question": "Which one is a star?", "options": ["⭐", "🔵", "🟩"], "correctAnswer": 0 },
+  { "id": "shape_match_5", "ageRange": "4-5", "title": "Find the Heart", "question": "Which one is a heart?", "options": ["💛", "❤️", "🟣"], "correctAnswer": 1 },
+  { "id": "shape_match_6", "ageRange": "4-5", "title": "Find the Oval", "question": "Which one is shaped like an egg?", "options": ["🔵", "🟠", "🟣"], "correctAnswer": 1 },
+  { "id": "shape_match_7", "ageRange": "4-5", "title": "Find the Rectangle", "question": "Which one looks like a door?", "options": ["⬜", "🟩", "⬛"], "correctAnswer": 1 },
+  { "id": "shape_match_8", "ageRange": "4-5", "title": "Find the Diamond", "question": "Which one is a diamond?", "options": ["🔶", "🔷", "⬜"], "correctAnswer": 0 },
+  { "id": "shape_match_9", "ageRange": "5-6", "title": "Complex Shape", "question": "Which one has straight edges only?", "options": ["🔵", "⬜", "⭐"], "correctAnswer": 1 },
+  { "id": "shape_match_10", "ageRange": "5-6", "title": "Shape Count", "question": "Which has the most points?", "options": ["🔺", "⬜", "⭐"], "correctAnswer": 2 }
+]
