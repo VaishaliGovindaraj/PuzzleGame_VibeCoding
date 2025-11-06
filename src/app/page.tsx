@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import type { AgeRange } from '@/types/puzzle';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import { useAuth } from '@/contexts/AuthContext';
 
 const categories = [
   {
@@ -36,18 +38,36 @@ const ageRanges: { value: AgeRange; label: string }[] = [
 
 export default function Home() {
   const [selectedAge, setSelectedAge] = useState<AgeRange>('3-4');
+  const { user, logout } = useAuth();
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 flex items-center justify-center p-4 sm:p-6 md:p-8">
-      <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-5xl xl:max-w-6xl">
-        {/* Header */}
-        <div className="text-center mb-6 sm:mb-8 md:mb-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-purple-600 mb-3 sm:mb-4">
-            🎮 SkillSprout
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 mb-6 sm:mb-8 px-4">
-            Fun Puzzles for Smart Kids!
-          </p>
+    <ProtectedRoute>
+      <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 flex items-center justify-center p-4 sm:p-6 md:p-8">
+        <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-5xl xl:max-w-6xl">
+          {/* User Info & Logout */}
+          <div className="flex justify-between items-center mb-4 sm:mb-6">
+            <div className="bg-white rounded-xl px-4 py-2 shadow-md">
+              <p className="text-sm sm:text-base text-gray-700">
+                <span className="font-semibold">Welcome,</span> {user?.username}
+                <span className="text-xs sm:text-sm text-gray-500 ml-2">({user?.role})</span>
+              </p>
+            </div>
+            <button
+              onClick={logout}
+              className="bg-red-500 hover:bg-red-600 text-white font-bold px-4 py-2 sm:px-6 sm:py-2 rounded-xl text-sm sm:text-base transition-all transform active:scale-95 sm:hover:scale-105"
+            >
+              🚪 Logout
+            </button>
+          </div>
+
+          {/* Header */}
+          <div className="text-center mb-6 sm:mb-8 md:mb-10">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-purple-600 mb-3 sm:mb-4">
+              🎮 SkillSprout
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 mb-6 sm:mb-8 px-4">
+              Fun Puzzles for Smart Kids!
+            </p>
 
           {/* Age Selection */}
           <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg mb-6 sm:mb-8">
@@ -106,5 +126,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </ProtectedRoute>
   );
 }
