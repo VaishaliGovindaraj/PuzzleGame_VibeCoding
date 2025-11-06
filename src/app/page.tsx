@@ -38,8 +38,8 @@ export default function Home() {
   const [selectedAge, setSelectedAge] = useState<AgeRange>('3-4');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 p-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 p-8">
+      <div className="mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-6xl font-bold text-purple-600 mb-4">
@@ -61,7 +61,7 @@ export default function Home() {
                   onClick={() => setSelectedAge(age.value)}
                   className={`px-8 py-4 rounded-2xl text-xl font-bold transition-all transform hover:scale-110 ${
                     selectedAge === age.value
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-110'
+                      ? 'bg-linear-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-110'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                   }`}
                 >
@@ -81,7 +81,7 @@ export default function Home() {
               className="group"
             >
               <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 cursor-pointer">
-                <div className={`bg-gradient-to-br ${category.color} rounded-2xl p-6 mb-4`}>
+                <div className={`bg-linear-to-br ${category.color} rounded-2xl p-6 mb-4`}>
                   <div className="text-7xl text-center mb-2">
                     {category.emoji}
                   </div>

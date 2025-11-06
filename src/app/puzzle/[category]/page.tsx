@@ -58,7 +58,7 @@ export default function PuzzlePage({
 
   if (!currentPuzzle || !info) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 flex items-center justify-center">
+      <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 flex items-center justify-center">
         <div className="text-center">
           <p className="text-3xl mb-4">No puzzles found!</p>
           <Link
@@ -102,7 +102,7 @@ export default function PuzzlePage({
   const isCorrect = selectedAnswer === currentPuzzle.correctAnswer;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 p-4 md:p-8">
+    <div className="min-h-screen bg-linear-to-br from-yellow-100 via-pink-100 to-purple-100 p-4 md:p-8">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
@@ -120,7 +120,7 @@ export default function PuzzlePage({
         </div>
 
         {/* Category Title */}
-        <div className={`bg-gradient-to-r ${info.color} rounded-3xl p-6 mb-8 text-center shadow-lg`}>
+        <div className={`bg-linear-to-r ${info.color} rounded-3xl p-6 mb-8 text-center shadow-lg`}>
           <div className="text-6xl mb-2">{info.emoji}</div>
           <h1 className="text-4xl font-bold text-white">{info.name}</h1>
           <p className="text-white text-xl mt-2">
@@ -154,7 +154,7 @@ export default function PuzzlePage({
                       : index === selectedAnswer
                       ? 'bg-red-400 text-white'
                       : 'bg-gray-200 text-gray-600'
-                    : 'bg-gradient-to-br from-blue-100 to-purple-100 hover:from-blue-200 hover:to-purple-200 cursor-pointer'
+                    : 'bg-linear-to-br from-blue-100 to-purple-100 hover:from-blue-200 hover:to-purple-200 cursor-pointer'
                 }`}
               >
                 {option}
@@ -195,7 +195,7 @@ export default function PuzzlePage({
               {!isLastPuzzle ? (
                 <button
                   onClick={handleNext}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-2xl text-xl font-bold hover:shadow-lg transform hover:scale-105 transition-all"
+                  className="px-8 py-4 bg-linear-to-r from-purple-500 to-pink-500 text-white rounded-2xl text-xl font-bold hover:shadow-lg transform hover:scale-105 transition-all"
                 >
                   Next Puzzle ➡️
                 </button>
@@ -207,13 +207,13 @@ export default function PuzzlePage({
                   <div className="flex gap-4 justify-center flex-wrap">
                     <button
                       onClick={handleRestart}
-                      className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-2xl text-xl font-bold hover:shadow-lg transform hover:scale-105 transition-all"
+                      className="px-8 py-4 bg-linear-to-r from-purple-500 to-pink-500 text-white rounded-2xl text-xl font-bold hover:shadow-lg transform hover:scale-105 transition-all"
                     >
                       🔄 Play Again
                     </button>
                     <Link
                       href="/"
-                      className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-2xl text-xl font-bold hover:shadow-lg transform hover:scale-105 transition-all"
+                      className="px-8 py-4 bg-linear-to-r from-blue-500 to-cyan-500 text-white rounded-2xl text-xl font-bold hover:shadow-lg transform hover:scale-105 transition-all"
                     >
                       🏠 Choose New Category
                     </Link>
@@ -228,7 +228,7 @@ export default function PuzzlePage({
         <div className="bg-white rounded-2xl p-4 shadow-lg">
           <div className="bg-gray-200 rounded-full h-4 overflow-hidden">
             <div
-              className="bg-gradient-to-r from-purple-500 to-pink-500 h-full transition-all duration-500"
+              className="bg-linear-to-r from-purple-500 to-pink-500 h-full transition-all duration-500"
               style={{
                 width: `${((currentIndex + 1) / filteredPuzzles.length) * 100}%`,
               }}
