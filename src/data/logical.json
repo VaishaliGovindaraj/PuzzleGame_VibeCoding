@@ -1,0 +1,17 @@
+[
+  { "id": "logical_1", "ageRange": "3-4", "title": "Big or Small", "question": "Which one is bigger?", "options": ["🐘", "🐁", "🐜"], "correctAnswer": 0, "hint": "The elephant is the biggest!" },
+  { "id": "logical_2", "ageRange": "3-4", "title": "Day or Night", "question": "When do you see the sun?", "options": ["☀️ Day", "🌙 Night", "🌧️ Rain"], "correctAnswer": 0 },
+  { "id": "logical_3", "ageRange": "3-4", "title": "Hot or Cold", "question": "Which is cold?", "options": ["🔥", "❄️", "☀️"], "correctAnswer": 1 },
+  { "id": "logical_4", "ageRange": "3-4", "title": "Fast or Slow", "question": "Which is the fastest?", "options": ["🐢", "🐇", "🐌"], "correctAnswer": 1 },
+  { "id": "logical_5", "ageRange": "4-5", "title": "What Comes Next?", "question": "What comes after eating?", "options": ["🍽️ Cook", "🧼 Wash", "🛒 Shop"], "correctAnswer": 1 },
+  { "id": "logical_6", "ageRange": "4-5", "title": "Where Does It Live?", "question": "Where does a fish live?", "options": ["🌊 Water", "🌳 Tree", "🏠 House"], "correctAnswer": 0 },
+  { "id": "logical_7", "ageRange": "4-5", "title": "Opposites", "question": "What is the opposite of up?", "options": ["⬇️ Down", "➡️ Right", "⬅️ Left"], "correctAnswer": 0 },
+  { "id": "logical_8", "ageRange": "4-5", "title": "What's Missing?", "question": "It's raining, what do you need?", "options": ["🕶️ Sunglasses", "☂️ Umbrella", "🧢 Hat"], "correctAnswer": 1 },
+  { "id": "logical_9", "ageRange": "5-6", "title": "Grouping", "question": "Which one doesn't belong?", "options": ["🍎 Apple", "🍌 Banana", "🚗 Car"], "correctAnswer": 2 },
+  { "id": "logical_10", "ageRange": "5-6", "title": "Counting", "question": "If you have 2 🍎 and get 1 more, how many do you have?", "options": ["2️⃣", "3️⃣", "4️⃣"], "correctAnswer": 1 },
+  { "id": "logical_11", "ageRange": "5-6", "title": "Problem Solving", "question": "You're hungry. What should you do first?", "options": ["😴 Sleep", "🍽️ Eat", "🎮 Play"], "correctAnswer": 1 },
+  { "id": "logical_12", "ageRange": "5-6", "title": "Cause and Effect", "question": "What happens if you drop water?", "options": ["💧 It spills", "❄️ It freezes", "☁️ It flies"], "correctAnswer": 0 },
+  { "id": "logical_13", "ageRange": "5-6", "title": "Sequencing", "question": "What do you do before going to bed?", "options": ["🌅 Wake up", "🦷 Brush teeth", "🍳 Eat breakfast"], "correctAnswer": 1 },
+  { "id": "logical_14", "ageRange": "5-6", "title": "Comparing", "question": "Which holds the most water?", "options": ["🥤 Cup", "🏊 Pool", "🚿 Shower"], "correctAnswer": 1 },
+  { "id": "logical_15", "ageRange": "5-6", "title": "Reasoning", "question": "It's very sunny and hot. What should you wear?", "options": ["🧥 Winter coat", "👕 T-shirt", "🧤 Gloves"], "correctAnswer": 1 }
+]

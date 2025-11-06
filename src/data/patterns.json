@@ -1,0 +1,17 @@
+[
+  { "id": "pattern_1", "ageRange": "3-4", "title": "Color Pattern", "question": "🔴 🟢 🔴 🟢 ... ?", "options": ["🔴", "🟢", "🔵"], "correctAnswer": 0, "hint": "It repeats red, green, red, green..." },
+  { "id": "pattern_2", "ageRange": "3-4", "title": "Shape Pattern", "question": "⬜ 🔺 ⬜ 🔺 ... ?", "options": ["⬜", "🔺", "⚫"], "correctAnswer": 0, "hint": "Square, triangle, square, triangle..." },
+  { "id": "pattern_3", "ageRange": "3-4", "title": "Animal Pattern", "question": "🐶 🐱 🐶 🐱 ... ?", "options": ["🐶", "🐱", "🐭"], "correctAnswer": 0 },
+  { "id": "pattern_4", "ageRange": "3-5", "title": "Fruit Pattern", "question": "🍎 🍌 🍎 🍌 ... ?", "options": ["🍎", "🍌", "🍇"], "correctAnswer": 0 },
+  { "id": "pattern_5", "ageRange": "4-5", "title": "Shape Growth", "question": "🔵 🔵🔵 🔵🔵🔵 ... ?", "options": ["🔵🔵🔵🔵", "🔵🔵", "🔵🔵🔵🔵🔵"], "correctAnswer": 0 },
+  { "id": "pattern_6", "ageRange": "4-5", "title": "Emoji Sequence", "question": "😀 😐 😀 😐 ... ?", "options": ["😀", "😐", "😢"], "correctAnswer": 0 },
+  { "id": "pattern_7", "ageRange": "4-5", "title": "Transportation Pattern", "question": "🚗 ✈️ 🚗 ✈️ ... ?", "options": ["🚗", "✈️", "🚲"], "correctAnswer": 0 },
+  { "id": "pattern_8", "ageRange": "4-6", "title": "Odd One Out", "question": "🟩 🟩 🟦 🟩 🟩 🟦 ... ?", "options": ["🟩", "🟦", "🟥"], "correctAnswer": 0 },
+  { "id": "pattern_9", "ageRange": "4-6", "title": "Size Pattern", "question": "⚫ ⚫⚫ ⚫⚫⚫ ... ?", "options": ["⚫⚫⚫⚫", "⚫", "⚫⚫"], "correctAnswer": 0 },
+  { "id": "pattern_10", "ageRange": "4-6", "title": "Weather Pattern", "question": "☀️ ☁️ ☀️ ☁️ ... ?", "options": ["☀️", "☁️", "🌧️"], "correctAnswer": 0 },
+  { "id": "pattern_11", "ageRange": "5-6", "title": "Mixed Objects", "question": "🍓 🍓 🍉 🍓 🍓 🍉 ... ?", "options": ["🍓", "🍉", "🍇"], "correctAnswer": 0 },
+  { "id": "pattern_12", "ageRange": "5-6", "title": "Direction Pattern", "question": "⬆️ ⬇️ ⬆️ ⬇️ ... ?", "options": ["⬆️", "⬇️", "⬅️"], "correctAnswer": 0 },
+  { "id": "pattern_13", "ageRange": "5-6", "title": "3-Step Pattern", "question": "🟢 🟢 🔴 🔴 🔵 🔵 🟢 🟢 🔴 🔴 ... ?", "options": ["🔵", "🟢", "🔴"], "correctAnswer": 0 },
+  { "id": "pattern_14", "ageRange": "5-6", "title": "Animal Movement", "question": "🐢 🐇 🐢 🐇 ... ?", "options": ["🐢", "🐇", "🐍"], "correctAnswer": 0 },
+  { "id": "pattern_15", "ageRange": "5-6", "title": "Counting Pattern", "question": "1️⃣ 2️⃣ 1️⃣ 2️⃣ ... ?", "options": ["1️⃣", "2️⃣", "3️⃣"], "correctAnswer": 0 }
+]
