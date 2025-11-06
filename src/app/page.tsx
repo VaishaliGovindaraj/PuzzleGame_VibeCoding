@@ -43,7 +43,7 @@ export default function Home() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-6xl font-bold text-purple-600 mb-4">
-            🎮 SkillSprout
+            🎮 Skill Sprout 
           </h1>
           <p className="text-2xl text-gray-700 mb-8">
             Fun Puzzles for Smart Kids!
