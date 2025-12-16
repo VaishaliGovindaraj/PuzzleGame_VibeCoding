@@ -3,7 +3,7 @@ import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
 
 export const metadata: Metadata = {
-  title: "SkillSprout - Kids Puzzle Game",
+  title: "SkillSprout-Kids Puzzle Game",
   description: "Educational puzzle games for kids aged 3-6",
 };
 
