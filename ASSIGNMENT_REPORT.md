@@ -7,6 +7,20 @@
 **Target Audience:** Children aged 3-6 years
 **Date:** December 2024
 
+## 🌐 Live Demo
+
+**Deployed Application:** [https://puzzle-game-vibe-coding.vercel.app/login](https://puzzle-game-vibe-coding.vercel.app/login)
+
+### Quick Access - Sample Login Credentials:
+
+| Username | Password | Role |
+|----------|----------|------|
+| admin | admin123 | Administrator |
+| teacher | teacher123 | Teacher |
+| parent | parent123 | Parent |
+
+> **Note:** Click "Show Demo Credentials" on the login page to view these credentials.
+
 ---
 
 ## Table of Contents
@@ -689,6 +703,8 @@ SkillSprout provides:
 - ✅ Zero runtime errors in production build
 - ✅ Clean, maintainable codebase
 - ✅ Comprehensive component structure
+- ✅ Successfully deployed to Vercel (Production-ready)
+- ✅ Live demo accessible via HTTPS
 
 ---
 
@@ -701,10 +717,18 @@ SkillSprout provides:
 - **TypeScript:** https://www.typescriptlang.org
 - **Tailwind CSS:** https://tailwindcss.com
 
-### B. Repository Information
+### B. Repository & Deployment Information
 
-- **GitHub Repository:** https://github.com/VaishaliGovindaraj/PuzzleGame_VibeCoding
+**GitHub Repository:**
+- **URL:** https://github.com/VaishaliGovindaraj/PuzzleGame_VibeCoding
 - **Branch:** `claude/kids-puzzle-app-nextjs-011CUqw8oDV2sn2zuXUQL6uD`
+
+**Live Deployment:**
+- **Platform:** Vercel
+- **URL:** https://puzzle-game-vibe-coding.vercel.app/login
+- **Status:** ✅ Live and Accessible
+- **Build:** Production-optimized with Next.js
+- **SSL:** Enabled (HTTPS)
 
 ### C. Testing Credentials
 
